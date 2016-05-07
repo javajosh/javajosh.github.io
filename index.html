@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Green Square on Github Pages</title>
 	<style>
+		/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 		html{
 			box-sizing: border-box;
 		}
@@ -41,8 +42,9 @@
 	<div class="green square"></div>
 
 	<p>Here is another green square, a little darker this time, made with SVG:</p>
+	<svg width='100px' height= '100px' style='background-color:#004400' />
 	<svg width='100px' height= '100px'>
-		<rect x="0" y="0" w="100px" h="100px" fill="green"/>
+		<rect x="0" y="0" width="100px" height="100px" fill="#006600"/>
 	</svg>
 </body>
 </html>
