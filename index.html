@@ -4,20 +4,45 @@
 	<meta charset="UTF-8">
 	<title>Green Square on Github Pages</title>
 	<style>
+		html{
+			box-sizing: border-box;
+		}
+		*, *:before, *:after{
+			box-sizing: inherit;
+		}
+
+		body{margin:40px auto;
+			max-width:650px;
+			line-height:1.6;
+			font-size:18px;
+			color:#444;
+			padding:0 10px}
+		h1,h2,h3{line-height:1.2}
+ 
+
 		.green{
-			background-color: green;
+			background-color: green !important;
 		}
 		.square{
 			width: 100px;
 			height: 100px;
+			background-color: blue;
 		}
 	</style>
 </head>
 <body>
-	<h1>The Green Square on GitHub Pages</h1>
-	<p>Josh Rehman 2015/10/18</p>
-	<p>The green square is my version of hello world - it just means to put a green square on the screen.</p>
-	<p>In this case, I'm going to just use a div:</p>
+	<header>
+		<h1>The Green Square on GitHub Pages</h1>
+	</header>
+	
+	<aside class='byline author'>Josh Rehman <span class="date">Oct. 15 2015</span> <em>(updated: <span class="date">May. 7 2016</span>)</em></aside class='byline author'>
+
+	<p>The green square is my version of hello world - it just means to put a green square on the screen. In this case, I'm going to just use a div:</p>
 	<div class="green square"></div>
+
+	<p>Here is another green square, a little darker this time, made with SVG:</p>
+	<svg width='100px' height= '100px'>
+		<rect x="0" y="0" w="100px" h="100px" fill="green"/>
+	</svg>
 </body>
 </html>
