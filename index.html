@@ -30,6 +30,20 @@
 			background-color: blue;
 		}
 	</style>
+	<script>
+		/*
+		 * JavaScript Debug - v0.4 - 6/22/2010
+		 * http://benalman.com/projects/javascript-debug-console-log/
+		 * 
+		 * Copyright (c) 2010 "Cowboy" Ben Alman
+		 * Dual licensed under the MIT and GPL licenses.
+		 * http://benalman.com/about/license/
+		 * 
+		 * With lots of help from Paul Irish!
+		 * http://paulirish.com/
+		 */
+		window.debug=(function(){var i=this,b=Array.prototype.slice,d=i.console,h={},f,g,m=9,c=["error","warn","info","debug","log"],l="assert clear count dir dirxml exception group groupCollapsed groupEnd profile profileEnd table time timeEnd trace".split(" "),j=l.length,a=[];while(--j>=0){(function(n){h[n]=function(){m!==0&&d&&d[n]&&d[n].apply(d,arguments)}})(l[j])}j=c.length;while(--j>=0){(function(n,o){h[o]=function(){var q=b.call(arguments),p=[o].concat(q);a.push(p);e(p);if(!d||!k(n)){return}d.firebug?d[o].apply(i,q):d[o]?d[o](q):d.log(q)}})(j,c[j])}function e(n){if(f&&(g||!d||!d.log)){f.apply(i,n)}}h.setLevel=function(n){m=typeof n==="number"?n:9};function k(n){return m>0?m>n:c.length+m<=n}h.setCallback=function(){var o=b.call(arguments),n=a.length,p=n;f=o.shift()||null;g=typeof o[0]==="boolean"?o.shift():false;p-=typeof o[0]==="number"?o.shift():n;while(p<n){e(a[p++])}};return h})();
+	</script>
 </head>
 <body>
 	<header>
@@ -41,10 +55,65 @@
 	<p>The green square is my version of hello world - it just means to put a green square on the screen. In this case, I'm going to just use a div:</p>
 	<div class="green square"></div>
 
-	<p>Here is another green square, a little darker this time, made with SVG:</p>
-	<svg width='100px' height= '100px' style='background-color:#004400' />
+	<p>Let's make some green squares with SVG. First, with <code>background-color</code>:</p>
+	<svg width='100px' height= '100px' style='background-color:#004400'>
+	</svg>
+	<p>Next with <code>rect</code> &amp; <code>fill</code>:</p>
 	<svg width='100px' height= '100px'>
 		<rect x="0" y="0" width="100px" height="100px" fill="#006600"/>
 	</svg>
+	
+	<p>Next with <code>g</code> and <code>transform="translate(x,y) scale(.5)"</code> (note that these transforms are order dependant):</p>
+	<svg width='100px' height= '100px'>
+		<g transform="translate(50,50) scale(.5)">
+			<rect x="0" y="0" width="100px" height="100px" fill="#008800"/>
+		</g>
+	</svg>
+
+	<p>SVG lets you define things and then reuse them with different style settings.</p>
+	<svg width="300px" height="600px">
+	  <defs>
+		  <g id="logo" transform="scale(.85) translate(0,0)">
+			  <path d="M 20,100 C 65,-50 235,0 280,100" stroke="red" 	fill="none" />
+			  <path d="M 20,100 C 65,0   235,0 280,100" stroke="orange" fill="none" />
+			  <path d="M 20,100 C 65,50  235,0 280,100" stroke="yellow" fill="none" />
+			  <path d="M 20,100 C 65,100 235,0 280,100" stroke="green" 	fill="none" /> 
+			  <path d="M 20,100 C 65,150 235,0 280,100" stroke="blue" 	fill="none" />
+			  <path d="M 20,100 C 65,200 235,0 280,100" stroke="darkblue" fill="none" />
+			  <path d="M 20,100 C 65,250 235,0 280,100" stroke="violet" fill="none" />
+		  </g>
+	  </defs>
+	  <use xlink:href="#logo" x="0" y="0" 	  style="stroke-width: 2px" stroke-linecap="butt"/>
+	  <use xlink:href="#logo" x="0" y="200px" style="stroke-width: 5px" stroke-linecap="round"/>
+	  <use xlink:href="#logo" x="0" y="400px" style="stroke-width: 10px" stroke-linecap="round"/>
+	</svg>
+
+	<p>Okay, now let's print out some (multi-line) text:</p>
+	<svg width="100px" height="100px" style="border:1px solid black">
+		<text x="0" y="1em" font-size="1em" stroke="black">Hello</text>
+		<text x="0" y="2em" font-size="1em" stroke="black">Josh</text>
+	</svg>
+
+	<p>Note that SVG doesn't support word-wrapping natively, but foreignObject (for HTML) is widely supported.</p>
+
+	<svg width="200px" height="100px" style="border:1px solid black">
+		<foreignObject width="200" height="200" 
+     requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+      <p xmlns="http://www.w3.org/1999/xhtml">Text goes here but it doesn't wrap properly at <code>100px</code> width.</p>
+    </foreignObject>
+	</svg>
+
+
+	<script>
+		//Test the console.log polyfill.
+		debug.log('testing the console polyfill', 0);
+		debug.debug('testing the polyfill', 1);
+		debug.warn('testing the polyfill', 2);
+		debug.time('foo');
+		for(var i =0;i < 1000 * 1000;i++){i++} //3ms on my machine
+		debug.timeEnd('foo');
+		debug.setLevel(0);
+		debug.log('this should not be seen');
+	</script>
 </body>
 </html>
