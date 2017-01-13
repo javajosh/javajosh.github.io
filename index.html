@@ -1,173 +1,83 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
+
+
+<script type="text/javascript" src="analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app12.us.archive.org";archive_analytics.values.server_ms=418;</script>
+<link type="text/css" rel="stylesheet" href="banner-styles.css"/>
+
+
 	<meta charset="UTF-8">
-	<title>Green Square on Github Pages</title>
-	<style>
-		/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-		html{
-			box-sizing: border-box;
-		}
-		*, *:before, *:after{
-			box-sizing: inherit;
-		}
-
-		body{margin:40px auto;
-			max-width:650px;
-			line-height:1.6;
-			font-size:18px;
-			color:#444;
-			padding:0 10px}
-		h1,h2,h3{line-height:1.2}
- 
-
-		.green{
-			background-color: green !important;
-		}
-		.square{
-			width: 100px;
-			height: 100px;
-			background-color: blue;
-		}
-	</style>
-	<script>
-		/*
-		 * JavaScript Debug - v0.4 - 6/22/2010
-		 * http://benalman.com/projects/javascript-debug-console-log/
-		 * 
-		 * Copyright (c) 2010 "Cowboy" Ben Alman
-		 * Dual licensed under the MIT and GPL licenses.
-		 * http://benalman.com/about/license/
-		 * 
-		 * With lots of help from Paul Irish!
-		 * http://paulirish.com/
-		 */
-		window.debug=(function(){var i=this,b=Array.prototype.slice,d=i.console,h={},f,g,m=9,c=["error","warn","info","debug","log"],l="assert clear count dir dirxml exception group groupCollapsed groupEnd profile profileEnd table time timeEnd trace".split(" "),j=l.length,a=[];while(--j>=0){(function(n){h[n]=function(){m!==0&&d&&d[n]&&d[n].apply(d,arguments)}})(l[j])}j=c.length;while(--j>=0){(function(n,o){h[o]=function(){var q=b.call(arguments),p=[o].concat(q);a.push(p);e(p);if(!d||!k(n)){return}d.firebug?d[o].apply(i,q):d[o]?d[o](q):d.log(q)}})(j,c[j])}function e(n){if(f&&(g||!d||!d.log)){f.apply(i,n)}}h.setLevel=function(n){m=typeof n==="number"?n:9};function k(n){return m>0?m>n:c.length+m<=n}h.setCallback=function(){var o=b.call(arguments),n=a.length,p=n;f=o.shift()||null;g=typeof o[0]==="boolean"?o.shift():false;p-=typeof o[0]==="number"?o.shift():n;while(p<n){e(a[p++])}};return h})();
-	</script>
+	<meta name="keywords" content="custom software, java, javascript, html, css, javascript, front-end programming, back-end programming, apps, applications, workflow software, database design, server design, interface design, programmer, consultant, developer, coder, architect, bespoke programming">
+	<meta name="description" content="Online presence for JavaJosh Enterprises, Inc., a cutting edge, boutique programming shop located in Orange County, CA.">
+	<meta name="author" content="Josh Rehman">
+	<title>JavaJosh Enterprises, Inc.</title>
+	<link rel="stylesheet" href="style.css">
+	<!--[if lt IE 9]><script data-src="/web/20150714061846/https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv.js" src="html5shiv.js"></script><![endif]-->
 </head>
 <body>
-	<header>
-		<h1>The Green Square on GitHub Pages</h1>
-	</header>
-	
-	<aside class='byline author'>Josh Rehman <span class="date">Oct. 15 2015</span> <em>(updated: <span class="date">May. 7 2016</span>)</em></aside class='byline author'>
+	<div id="content">
+		<header>
+			<div>
+				<a href="mailto:josh@javajosh.com"><img id="logo" src="logo.png"></a>
+				<h1><a href="mailto:josh@javajosh.com">JavaJosh Enterprises, Inc.</a></h1>
+				<p class="tagline">Custom software for small business.</p>
+			</div>
+		</header>
+		
+		<hr>  <!-- I have a fondness for hr, okay? Don't hate. Borders are great, powerful, etc but why mess with simplicity? And yes, I like br too. Deal with it. Don't be a semantic fanatic, mkay?-->
+		<p class="blurb">If you've got a great software idea and want to make it a reality, and you want to hire an experienced, innovative, independant software developer to write it for you, then you've come to the right place! Email me at <a href="mailto:josh@javajosh.com">josh@javajosh.com</a> and we'll grab a coffee and discuss your idea.<span>(If you're here because you're just looking to waste time on the internet, then please proceed immediately to <a href="/web/20150714061846/http://xkcd.com/">XKCD</a>, <a href="/web/20150714061846/http://theoatmeal.com/">The Oatmeal</a>, or the ultimate time-waster, <a href="/web/20150714061846/http://news.ycombinator.com/">Hacker News</a>. I suppose you could also read on to see what I do and how I do it, in which case you must be <i>really</i> bored. My sympathies.)</span></p>
 
-	<p>The green square is my version of hello world - it just means to put a green square on the screen. In this case, I'm going to just use a div:</p>
-	<div class="green square"></div>
+<!-- 	TODO	<h3>Successes</h3>
+		<p>CitySearch:</p>
+		<p>Blizzard:</p>
+		<p>POC:</p>
+		<p>JPL:</p>
+		<p>CMW:</p>
+		<p>Simpatico:</p>
+ -->
 
-	<p>Let's make some green squares with SVG. First, with <code>background-color</code>:</p>
-	<svg width='100px' height= '100px' style='background-color:#004400'>
-	</svg>
-	<p>Next with <code>rect</code> &amp; <code>fill</code>:</p>
-	<svg width='100px' height= '100px'>
-		<rect x="0" y="0" width="100px" height="100px" fill="#006600"/>
-	</svg>
-	
-	<p>Next with <code>g</code> and <code>transform="translate(x,y) scale(.5)"</code> (note that these transforms are order dependant):</p>
-	<svg width='100px' height= '100px'>
-		<g transform="translate(50,50) scale(.5)">
-			<rect x="0" y="0" width="100px" height="100px" fill="#008800"/>
-		</g>
-	</svg>
+		<hr>
+		<h3>Applications</h3>
+		<p>The applications I write can run on the desktop, on the web, on your iPhone, iPad, or Android device. From the client perspective (that would be <i>your</i> perspective) the process involves a lot of talking, diagrams, walk-throughs, and using of the software. From the coder perspective (that would be <i>my</i> perspective), writing custom software applications is a fairly complex task, and every programmer I've met approaches the problem of managing project execution differently. The way I do it is with an <i>iterative process</i> where I create something quickly initially. It will suck. You look at it and give me feedback, and I will modify it to be a little better, and we repeat this until it's done, then we release it. See, simple!</p>
 
-	<p>SVG lets you define things and then reuse them with different style settings.</p>
-	<svg width="300px" height="600px">
-	  <defs>
-		  <g id="logo" transform="scale(.85) translate(0,0)">
-			  <path d="M 20,100 C 65,-50 235,0 280,100" stroke="red" 	fill="none" />
-			  <path d="M 20,100 C 65,0   235,0 280,100" stroke="orange" fill="none" />
-			  <path d="M 20,100 C 65,50  235,0 280,100" stroke="yellow" fill="none" />
-			  <path d="M 20,100 C 65,100 235,0 280,100" stroke="green" 	fill="none" /> 
-			  <path d="M 20,100 C 65,150 235,0 280,100" stroke="blue" 	fill="none" />
-			  <path d="M 20,100 C 65,200 235,0 280,100" stroke="darkblue" fill="none" />
-			  <path d="M 20,100 C 65,250 235,0 280,100" stroke="violet" fill="none" />
-		  </g>
-	  </defs>
-	  <use xlink:href="#logo" x="0" y="0" 	  style="stroke-width: 2px" stroke-linecap="butt"/>
-	  <use xlink:href="#logo" x="0" y="200px" style="stroke-width: 5px" stroke-linecap="round"/>
-	  <use xlink:href="#logo" x="0" y="400px" style="stroke-width: 10px" stroke-linecap="round"/>
-	</svg>
+		<p>'Making the right thing' is often a surprisingly organic process that involves a lot of communication between developer, customer, and user. People are very visual, and usually the conversation only really <i>starts</i> when people have a first version in front of them. So I aim to get that in front of them as soon as possible, usually about a week.</p>
 
-	<p>One of the things I used to love to make was a toy made from a piece of wood with tiny nails (called brads) nailed half-way in. Then I would use string to make a pleasing curve from a surprisingly simple sequence. If you start at the origin and go from y [top to bottom] and x [left to right] you get this wonderful curve.</p>
+<!-- 	TODO?	<p>Money. Money is an important topic, obviously. Programmers are expensive, and that's a problem for most small businesses. My approach when it comes to money, though, is simple: I only take projects that I want to invest in. My goal is to </p> -->
 
-	<p>Always start at the top of the y-axis.</p>
-	<p>Draw a line from x1=0 y1=n to x2=n y2=0</p>
-	<svg id="curve2" width="100px" height="100px" stroke="green" stroke-width="1px">
-		<line x1="0" y1="0"  x2="0"  y2="100"/>
-		<line x1="0" y1="10" x2="10" y2="100"/>
-		<line x1="0" y1="20" x2="20" y2="100"/>
-		<line x1="0" y1="30" x2="30" y2="100"/>
-		<line x1="0" y1="40" x2="40" y2="100"/>
-		<line x1="0" y1="50" x2="50" y2="100"/>
-		<line x1="0" y1="60" x2="60" y2="100"/>
-		<line x1="0" y1="70" x2="70" y2="100"/>
-		<line x1="0" y1="80" x2="80" y2="100"/>
-		<line x1="0" y1="90" x2="90" y2="100"/>
-		<line x1="0" y1="100"x2="100"y2="100"/>
-	</svg>
-	<script>
-		//This is what dom manipulation looks like with basic javascript.
-		var curve2 = document.getElementById('curve2');
-		var line = curve2.children[0];
-		//line.setAttribute('x1', 20);
+		<h4>Technical notes</h4>
+		<p>Some people feel better if they know more about the technical details of what goes on behind the scenes when I go off to create another software iteration. This rather long-winded section gives you a glimpse into the dark and mysterious topic of <i>how</i> I do software development.</p>
 
-		// Create an SVG element on another node with a set of attributes.
-		// Attributes with colons in the name (e.g. 'xlink:href') will automatically
-		// find the appropriate namespace URI from the SVG element.
-		// Optionally specify text to create as a child node, for example
-		//   createOn(someGroup,'text',{x:100,'text-anchor':'middle'},"Hello World!");
-		function createOn(root,name,attrs,text){
-		  var doc = root.ownerDocument, svg = root;
-		  while (svg.tagName!='svg') svg = svg.parentNode;
-		  var el = doc.createElementNS(svg.namespaceURI,name);
-		  for (var a in attrs){
-		    if (!attrs.hasOwnProperty(a)) continue;
-		    var p = a.split(':');
-		    if (p[1]) el.setAttributeNS(svg.getAttribute('xmlns:'+p[0]),p[1],attrs[a]);
-		    else el.setAttribute(a,attrs[a]);
-		  }
-		  if (text) el.appendChild(doc.createTextNode(text));
-		  return root.appendChild(el);
-		}
+		<p>HTML, CSS, and JavaScript is the future of application development. It runs everywhere, it's open, and it's powerful. <i>No other environment comes close.</i> The kind of functional dynamic programming the web requires is a Good Thing &trade; and extending this into data-storage, using so-called NoSQL storage rather than relational databases, is also the way of the future, at least for the majority of applications. Data structures change in time, and relational databases (and the applications built on them) always seem to be taken by surprise by this fact.</p>
 
-		createOn(curve2,'circle',{
-	      cx:50, cy:50, r:20,
-	      fill:'red', stroke:'black',
-	      'stroke-width':'20px', 'stroke-opacity':0.5
-	    });
-	</script>
+		<p>My favorite tools are Meteor (which combines nodejs and mongodb together and adds some great tooling and infrastructure - if you haven't used it you should), Resig's jQuery (of course), Mike Bostock's D3 visualization library, and Simpatico, my own application framework. My swiss army knife includes OSX, the command line, Sublime Text 2, Chrome and WebKit Inspector. For hosting duties I turn to Google App Engine for Java, Linode for other application hosting (Ubuntu, Nginx for proxy, Postfix for mail), and Namecheap for name hosting. I use Freshbooks for billing. I use PhoneGap as a mobile shim for targeting iPhone and Android (although I have my eye on Sencha). I prefer JSON to XML these days. Git has version control duties (I love GitHub for Mac for visualizing branches!). I don't always code Java, but when I do I use Eclipse, Tomcat, and Maven, and try to avoid ORM if I can. I generally don't use Clojure or Scala for JVM programming but would like to! I have a real fondness for Wireshark, and a  love/hate relationship with D3.</p>
 
-	<p>Okay, now let's print out some (multi-line) text:</p>
-	<svg width="100px" height="100px" style="border:1px solid black">
-		<text x="0" y="1em" font-size="1em" stroke="black">Hello</text>
-		<text x="0" y="2em" font-size="1em" stroke="black">Josh</text>
-	</svg>
+		<p>Data is the key, the heart, of any application, and if I can't see the data flow then I don't understand it. Diagramming, visualizing, screen-shots, are critical parts of getting the job done, but usually I'm very informal about it and tend to lean on collaboration diagrams that depict example objects interacting more than anything. My JavaScript code is almost always functional rather than object-oriented: you'll rarely see 'this' or 'new' in my code. Closures are easier to reason about, in my opinion. Oh, and I think TypeScript looks awsome, and underscore is useful but overrated.</p>
 
-	<p>Note that SVG doesn't support word-wrapping natively, but <code>foreignObject</code> (for embedding HTML in SVG) is widely supported.</p>
+		<hr>
+		<h3>Background</h3>
+		<h4>1990-1999: The early years</h4>
+		<p>I've been programming for a very long time. When I was 14 I programmed an application in FoxPro for my parents small mobile medical diagnostics business to handle their paperwork. In college I worked toward a BS in physics while also working for the UCI Office of Academic Computing doing basic web design when the field was new. I also did some VBA programming for research credit with a biology professor, Joe Arditti. After college I went into business for myself doing MS Access programming for small businesses and individuals. This got me noticed by Silicon Valley recruiters during the first internet boom, circa 1999, when I worked as a contractor for TCI-BR. I liked Access a lot but was frustrated by it's limitations, so I learned Java and was hired to work at HP Education, and then a (now defunct) SF startup called Spark Online. My focus was on desktop Java GUI programming with Swing interfacing with relational databases.</p>
 
-	<svg width="100px" height="100px" style="border:1px solid black">
-		<foreignObject width="200" height="200" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-      		<p xmlns="http://www.w3.org/1999/xhtml">Text goes here but it doesn't wrap properly at <code>100px</code> width.</p>
-    	</foreignObject>
-	</svg>
+		<h4>2000-2008: The Java years</h4>
+		<p>Although my experience with HP doing Java was good, it was my connection with the LA Java User's group got me a job with Citysearch when things really got going. Eventually I led a team of five developers there and re-architected several customer-facing and internal systems using a (then new) Java/Hibernate/Spring stack. Evite and Match were sister companies under Vivendi and housed in the same building, and those teams learned from my team's experience. Also, that architecture was chosen to replace the mod_perl based system for the consumer Citysearch site. Citysearch was when I added consumer-oriented webapps to my 'enterprise Java' repertoire.</p>
 
-	<svg width="200px" height="100px" style="border:1px solid black">
-		<foreignObject width="200" height="200" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-      		<p xmlns="http://www.w3.org/1999/xhtml">Text goes here and it <i>does</i> wrap properly at <code>200px</code> width.</p>
-    	</foreignObject>
-	</svg>
+		<p>I worked briefly for the Blizzard Entertainment (now horribly renamed ActivisionBlizzard) web team in 2008 doing more Java webapp stuff. (Being a gamer myself, I was really happy there, and the circumstances of my departure were rather sad - ask me about it some time over a drink.) I had another interesting work experience at JPL in 2011, where I worked on a Lucene project for the ISS, and a cloud-hosted image processing system that used a novel distributed continuation library from EC2  destined to be used for processing images from the Curiosity Mars rover. (Personally I thought Hadoop was a much better fit, if more boring, but it's hard to change JPL's mind once it's made!)</p>
+
+		<h4>2009-Present: The Age of the Open Web</h4>
+		<p>These days I'm bullish on the open web, and that means HTML, CSS and JavaScript. Java (and occasional Ruby and Python) is still there, but JavaScript's native environment, the browser, makes JS the best language around, even with it's warts. All of my projects since 2003 have required at least some HTML, CSS and JavaScript - with the balance usually in Java. Node has really shaken things up, giving JavaScript a lot of reach, and the capacity to use one language for the whole stack. New products like Meteor are really shaking things up. And of course, browsers keep increasing their capabilities as well. The neat thing is that web technology will run anywhere: I have written programs using open web technologies that run on iPhone, Android, Mac and Windows desktop, and you'd be unable to tell the difference. JavaScript, HTML and CSS has fulfilled Java's promise of "write once, run anywhere".</p>
 
 
-	<script>
-		//Test the console.log polyfill.
-		debug.log('testing the console polyfill', 0);
-		debug.debug('testing the polyfill', 1);
-		debug.warn('testing the polyfill', 2);
-		debug.time('foo');
-		for(var i =0;i < 1000 * 1000;i++){i++} //3ms on my machine
-		debug.timeEnd('foo');
-		debug.setLevel(0);
-		debug.log('this should not be seen');
-	</script>
+
+		<p class="updated" title="It's kind of a pet peeve of mine that a lot of content doesn't mention when it was written or by whom. Consider this a small gesture to rectify that.">Updated: Jan 30, 2013, Josh Rehman</p>
+		<hr>
+		<footer>Copyright &copy; 2013 JavaJosh Enterprises, Inc. and Josh Rehman. <a href="mailto:josh@javajosh.com">josh@javajosh.com</a> (562) 546-3882. All rights reserved.</footer>
+		
+	</div>
+	<script src="logo-anim.js"></script>
+
 </body>
 </html>
+

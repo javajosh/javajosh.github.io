@@ -1,0 +1,126 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 4:52:51 Aug 3, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:01:47 Jan 13, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+		So, a brief note about the CSS for this page. 
+
+		I decided to not use a reset, which is fairly unusual for me. However,
+		I wanted to try "going with the grain" of the original intent of CSS. This
+		in turn meant making this site into a rather traditional single-document
+		affair. That's not to say there isn't some fancy footwork in here, particularly
+		with the header, but it's judicious. It's not that I haven't used Bootstrap
+		or don't like it, it's just that sometimes it starts to feel a little oppressive,
+		and every now and again it's nice to 'get back to basics' with a technology.
+
+		You'll notice a few CSS3 flourishes in here, rounded corners and drop shadows.
+		 But I haven't prefixed them since I don't really care if it renders in all
+		 browsers. Heck, this page will be totally usable with CSS disabled, which
+		 is rare enough these days.
+
+		I've also chosen not to preprocess the file - minify the CSS and Javascript,
+		etc. First, a page this size (less than 30k including the image) doesn't need it.
+		Second, part of the purpose of this page is for the source to be read. I think
+		it's safe to say that this page represents what I believe to be the sweet spot
+		of traditional, document-oriented web-pages: content heavy, with just enough
+		little touches to not make readers nauseated (like Remy smelling the soup in
+		Pixar's Ratatouille).
+
+		Truth be told I was tempted to put together a multi-page monstrosity
+		filled with corporate-speak. But that would only be ugly, but worse,
+		dishonest. Let's face it: as of yet I'm a single coder consultancy.
+		Although I do use freelance designers (including 99designs) and a *ton*
+		of other vendors for things like hosting (thanks Linode and Google!)
+		really, it's just me. This is one of those places where technology and
+		business success collide: because of my decision to be honest, I was also able
+		to write more 'honest' css. That makes me happy.
+
+		And yes, I'm tempted to put 'contenteditable' on the html element
+		just to mess with people. HTML5 is *awesome*. :)
+
+
+*/
+/*==================== Basic colors and typography =======================*/
+body{
+	color: #444; background: #EEE; font: 14px/24px "Open Sans" sans-serif;
+}
+
+
+/*==================== Link color and decoration =======================*/
+a{
+	color: hsl(215,88%,47%); text-decoration: none;
+}
+a:visited{
+	color: hsl(205,58%,47%);
+}
+a:hover{
+	color: red;
+}
+a:active{
+	color: #444;
+}
+
+
+/*====================== Content ==========================*/
+/* Our content area is centered with a pattern background, padding and a max-width, and inherits all fonts from body*/
+#content{
+	background: #FFF url(/web/20150803045251/http://javajosh.com/light-crosshatch.jpg); text-align: justify; hyphens: auto; /*http://www.quirksmode.org/blog/archives/2012/11/hyphenation_wor.html*/
+	margin: 0 auto; max-width: 810px; min-width: 480px; padding: 10px 50px;
+	box-shadow: 0 1px 90px #137; border-radius: 8px;
+
+}
+
+/*================== Nudge the header, logo and tagline around to look good ====================*/
+header div{
+	margin: 0 auto; width: 480px; padding-right: 145px; margin-bottom: 30px;
+}
+header h1{
+	margin-bottom: 0;
+}
+.tagline{
+	margin-top: 2px;
+}
+#logo{
+	float: left; margin-top: -28px; width: 100px; height: 100px;
+}
+
+/*================== Misc. styles ====================*/
+hr{
+	clear:both; margin-top: 10px;
+}
+footer{
+	font-size: smaller; text-align: center;
+}
+.blurb{
+	margin: 0 100px;
+}
+.blurb span{
+	font-size: smaller; display: block; margin-top: 10px;
+}
+h4{
+	margin-left: 30px;
+}
+.updated{
+	font-size:10px; font-style: italic; float: right; clear:both;
+}
+pre{
+	clear:both;
+}
+.left{
+	float: left; margin-right: 20px;
+}
+.right{
+	float: right; margin-left: 20px;
+}
+.clearfix{
+	clear:both;
+}
