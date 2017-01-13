@@ -1,16 +1,4 @@
 
-
-
-
-
-/*
-     FILE ARCHIVED ON 6:06:36 Aug 3, 2015 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 4:01:47 Jan 13, 2017.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
 //How can I claim to code JavaScript without a procedural animation?! Or jquery-less DOM manipulation?!
 //You *can* do DOM manipulation without jQuery! Crazy, I know!
 (function(){
