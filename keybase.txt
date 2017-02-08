@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/javajosh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://javajosh.com
+  * I am javajosh (https://keybase.io/javajosh) on keybase.
+  * I have a public key ASBWfT1j9sHejkah-3Hw6gk_6Rl-fnnLzO9WqiEEj-FzDQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120567d3d63f6c1de8e46a1fb71f0ea093fe9197e7e79cbccef56aa21048fe1730d0a",
+            "host": "keybase.io",
+            "kid": "0120567d3d63f6c1de8e46a1fb71f0ea093fe9197e7e79cbccef56aa21048fe1730d0a",
+            "uid": "a0a4871ee187645269975fea3457f319",
+            "username": "javajosh"
+        },
+        "service": {
+            "hostname": "javajosh.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1486597054,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1486597048,
+        "hash": "eb68d01ce0f34476ca9558ca5a50988107c55966c52cb2b54cae0c64a573dc01dc7cbb99940c2b098f0fef0667bba9df614ab8a1a69245540880271aa35a7180",
+        "seqno": 849396
+    },
+    "prev": "dcbc5ddfaa08fda6032c2dd919c9a7c816ca073921ed98add1b3c49fcf3d2b18",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgVn09Y/bB3o5Goftx8OoJP+kZfn55y8zvVqohBI/hcw0Kp3BheWxvYWTFAvN7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNTY3ZDNkNjNmNmMxZGU4ZTQ2YTFmYjcxZjBlYTA5M2ZlOTE5N2U3ZTc5Y2JjY2VmNTZhYTIxMDQ4ZmUxNzMwZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNTY3ZDNkNjNmNmMxZGU4ZTQ2YTFmYjcxZjBlYTA5M2ZlOTE5N2U3ZTc5Y2JjY2VmNTZhYTIxMDQ4ZmUxNzMwZDBhIiwidWlkIjoiYTBhNDg3MWVlMTg3NjQ1MjY5OTc1ZmVhMzQ1N2YzMTkiLCJ1c2VybmFtZSI6ImphdmFqb3NoIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJqYXZham9zaC5jb20iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE4In0sImN0aW1lIjoxNDg2NTk3MDU0LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0ODY1OTcwNDgsImhhc2giOiJlYjY4ZDAxY2UwZjM0NDc2Y2E5NTU4Y2E1YTUwOTg4MTA3YzU1OTY2YzUyY2IyYjU0Y2FlMGM2NGE1NzNkYzAxZGM3Y2JiOTk5NDBjMmIwOThmMGZlZjA2NjdiYmE5ZGY2MTRhYjhhMWE2OTI0NTU0MDg4MDI3MWFhMzVhNzE4MCIsInNlcW5vIjo4NDkzOTZ9LCJwcmV2IjoiZGNiYzVkZGZhYTA4ZmRhNjAzMmMyZGQ5MTljOWE3YzgxNmNhMDczOTIxZWQ5OGFkZDFiM2M0OWZjZjNkMmIxOCIsInNlcW5vIjo3LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQGupKpYM3CJilzc+XSwmINb486USVlqWKnUzfW+UvxEpEZtAIUme42wEdNP+ZgBd8xLGw3wweIfn7tvYsLAftQeoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDBM1U77FrdyDZQXzTMdK2PlCdM1mbrMhgbKj+tfoxhjKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/javajosh
+
+==================================================================
